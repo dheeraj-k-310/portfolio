@@ -152,44 +152,106 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ----- Particle Effect Background -----
-const canvas = document.getElementById('particleCanvas');
-const ctx = canvas.getContext('2d');
-function resizeCanvas() {
+
+/*******************************************
+ * Particle Effect Background
+ ******************************************/
+document.addEventListener("DOMContentLoaded", function () {
+  const canvas = document.getElementById("particleCanvas");
+  const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-class Particle {
-  constructor() { this.reset(); }
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
-    this.vx = (Math.random() - 0.5) * 0.5;
-    this.vy = (Math.random() - 0.5) * 0.5;
-    const opacity = Math.random() * 0.3 + 0.1;
-    this.color = `rgba(135, 206, 250, ${opacity})`;
+  let particlesArray = [];
+  const particleColor = "#3b82f6";
+  
+  class Particle {
+    constructor(x, y, size, speedX, speedY) {
+      this.x = x;
+      this.y = y;
+      this.size = size;
+      this.speedX = speedX;
+      this.speedY = speedY;
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+    }
+    draw() {
+      ctx.fillStyle = particleColor;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
   }
-  update() {
-    this.x += this.vx;
-    this.y += this.vy;
-    if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height)
-      this.reset();
+  
+  function initParticles() {
+    particlesArray = [];
+    for (let i = 0; i < 200; i++) {
+      let size = Math.random() * 2 + 0.5;
+      let x = Math.random() * canvas.width;
+      let y = Math.random() * canvas.height;
+      let speedX = (Math.random() - 0.5) * 1.5;
+      let speedY = (Math.random() - 0.5) * 1.5;
+      particlesArray.push(new Particle(x, y, size, speedX, speedY));
+    }
   }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.fill();
+  
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particlesArray.forEach(particle => {
+      particle.update();
+      particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
   }
-}
-const particleCount = Math.min(100, Math.floor((window.innerWidth * window.innerHeight) / 9000));
-const particles = [];
-for (let i = 0; i < particleCount; i++) { particles.push(new Particle()); }
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => { p.update(); p.draw(); });
-  requestAnimationFrame(animateParticles);
-}
-animateParticles();
+  
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initParticles();
+  });
+  
+  initParticles();
+  animateParticles();
+});
+
+
+
+
+
+
+
+
+// Add this to your script.js file within the DOMContentLoaded event listener
+const eduCards = document.querySelectorAll('.edu-card');
+eduCards.forEach(card => {
+  // Keep existing animation code here
+  
+  // Add click functionality
+  card.addEventListener('click', () => {
+    // Toggle expanded class on this card
+    card.classList.toggle('expanded');
+    
+    // Close other cards (optional - remove if you want multiple cards expanded)
+    eduCards.forEach(otherCard => {
+      if (otherCard !== card) {
+        otherCard.classList.remove('expanded');
+      }
+    });
+  });
+  
+  // Prevent click event from triggering when hovering over the card's 3D effect
+  card.addEventListener('mousemove', (e) => {
+    // Keep existing mousemove code here
+    e.stopPropagation(); // This prevents the click handler from firing during hover animation
+  });
+});
+
+
+
+
+
+
+
