@@ -1,8 +1,4 @@
-/*
- * script.js - JavaScript for Modern Portfolio
- * Handles theme toggling, navigation smooth scroll, element animations,
- * hamburger menu, contact form simulation, and particle background.
- */
+
 document.addEventListener('DOMContentLoaded', () => {
   // ----- Theme Toggle -----
   const themeToggle = document.querySelector('.theme-toggle');
