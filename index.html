@@ -4,7 +4,7 @@
   <!-- Meta Data & Title -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Portfolio</title>
+  <title>DHEERAJ</title>
   <link rel="icon" type="image/png" href="./Images/code.png">
 
   <!-- Stylesheets -->
@@ -12,226 +12,293 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="hamburger-menu">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <div class="nav-links">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="theme-toggle">
-      <i class="fas fa-sun"></i>
-    </div>
-  </nav>
-  
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="text-content">
-        <h1>Hi, I'm <span class="highlight">Dheeraj</span></h1>
-        <h2>Web Developer</h2>
-        <p>Passionate about coding and web development, creating clean and efficient solutions.</p>
-        <div class="button-group">
-          <a href="https://drive.google.com/file/d/1sOE2YekAYskT95mA4zKJUZRy5w-aDEr1/view" target="_blank" class="cta-button">Resume</a>
-          <a href="#portfolio" class="secondary-button">My Work</a>
-        </div>
+  <div class="main-content">
+    <canvas id="particleCanvas"></canvas>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
-      <div class="code-animation">
-        <div class="code-container">
-          <pre class="code-block">
-<span class="keyword">const</span> developer = <span class="string">"Dheeraj"</span>;
-<span class="keyword">const</span> skills = [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JavaScript"</span>];
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </div>
+    </nav>
+    
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="text-content">
+          <span class="subtitle">Web Developer</span>
+          <h1>Hi, I'm <span class="highlight">Dheeraj</span></h1>
+          <p class="hero-description">Building digital experiences with clean code and creative solutions.</p>
+          <div class="button-group">
+            <a href="https://drive.google.com/file/d/1nTYsXimIVgDU414VHnVtkFKn-eGM0ekh/view?usp=sharing" target="_blank" class="cta-button">
+              <span>View Resume</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a href="#portfolio" class="secondary-button">My Projects</a>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-label">Tech Stack</span>
+            <div class="tech-icons">
+              <div class="tech-icon" title="HTML">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                  <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"></path>
+                </svg>
+              </div>
+              <div class="tech-icon" title="CSS">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                  <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414v-.001z"></path>
+                </svg>
+              </div>
+              <div class="tech-icon" title="JavaScript">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                  <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"></path>
+                </svg>
+              </div>
+              <div class="tech-icon" title="Python">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                  <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="visual-element">
+          <div class="code-animation">
+            <div class="code-container">
+              <div class="code-controls">
+                <span class="control"></span>
+                <span class="control"></span>
+                <span class="control"></span>
+              </div>
+              <pre class="code-block">
+                <span class="keyword">const</span> <span class="variable">developer</span> = {
+      <span class="property">name</span>: <span class="string">"Dheeraj"</span>,
+      <span class="property">specialty</span>: <span class="string">"Web Development"</span>,
+      <span class="property">skills</span>: [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JavaScript"</span>, <span class="string">"Python"</span>],
+      <span class="property">education</span>: <span class="string">"B.Tech in Mathematics & Computing"</span>,
+      <span class="property">createSolution</span>: <span class="function">function</span>() {
+        <span class="keyword">return</span> <span class="string">`${</span><span class="variable">this</span>.<span class="property">name</span><span class="string">} is coding something amazing...`</span>;
+      }
+    };
 
-<span class="keyword">function</span> <span class="function">buildProject</span>() {
-    <span class="keyword">return</span> `Creating awesome web experiences!`;
-}
-          </pre>
+    <span class="variable">console</span>.<span class="function">log</span>(<span class="variable">developer</span>.<span class="function">createSolution</span>());
+              </pre>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="7 13 12 18 17 13"></polyline>
+          <polyline points="7 6 12 11 17 6"></polyline>
+        </svg>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p class="about-text">
+          I am a self-taught Web Developer and an undergraduate in Mathematics and Computing. Skilled in HTML, CSS, JavaScript, and Python, I specialize in building user-friendly, high-performance applications. Passionate about combining design and technology, I'm currently focusing on backend development to create seamless and efficient solutions.
+        </p>
+        <div class="skills-container">
+          <h3>My Skills</h3>
+          <div class="skills-grid">
+            <!-- Skill Cards -->
+            <div class="skill-card" data-skill="Python">
+              <div class="skill-icon">
+                <!-- Python SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 48 48">
+                  <path fill="#0277BD" d="M24.047,5c-1.555,0.005-2.633,0.142-3.936,0.367c-3.848,0.67-4.549,2.077-4.549,4.67V14h9v2H15.22h-4.35c-2.636,0-4.943,1.242-5.674,4.219c-0.826,3.417-0.863,5.557,0,9.125C5.851,32.005,7.294,34,9.931,34h3.632v-5.104c0-2.966,2.686-5.896,5.764-5.896h7.236c2.523,0,5-1.862,5-4.377v-8.586c0-2.439-1.759-4.263-4.218-4.672C27.406,5.359,25.589,4.994,24.047,5z M19.063,9c0.821,0,1.5,0.677,1.5,1.502c0,0.833-0.679,1.498-1.5,1.498c-0.837,0-1.5-0.664-1.5-1.498C17.563,9.68,18.226,9,19.063,9z"></path>
+                  <path fill="#FFC107" d="M23.078,43c1.555-0.005,2.633-0.142,3.936-0.367c3.848-0.67,4.549-2.077,4.549-4.67V34h-9v-2h9.343h4.35c2.636,0,4.943-1.242,5.674-4.219c0.826-3.417,0.863-5.557,0-9.125C41.274,15.995,39.831,14,37.194,14h-3.632v5.104c0,2.966-2.686,5.896-5.764,5.896h-7.236c-2.523,0-5,1.862-5,4.377v8.586c0,2.439,1.759,4.263,4.218,4.672C19.719,42.641,21.536,43.006,23.078,43z M28.063,39c-0.821,0-1.5-0.677-1.5-1.502c0-0.833,0.679-1.498,1.5-1.498c0.837,0,1.5,0.664,1.5,1.498C29.563,38.32,28.899,39,28.063,39z"></path>
+                </svg>
+              </div>
+              <span>Python</span>
+            </div>
+            <div class="skill-card" data-skill="HTML">
+              <div class="skill-icon">
+                <!-- HTML SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 48 48">
+                  <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5z"></path>
+                  <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                  <path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path>
+                  <path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
+                </svg>
+              </div>
+              <span>HTML</span>
+            </div>
+            <div class="skill-card" data-skill="CSS">
+              <div class="skill-icon">
+                <!-- CSS SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 48 48">
+                  <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5z"></path>
+                  <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
+                  <path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path>
+                  <path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path>
+                </svg>
+              </div>
+              <span>CSS</span>
+            </div>
+            <div class="skill-card" data-skill="JavaScript">
+              <div class="skill-icon">
+                <!-- JavaScript SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 48 48">
+                  <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
+                  <path fill="#000001" d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"></path>
+                </svg>
+              </div>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-card" data-skill="C++">
+              <div class="skill-icon">
+                <!-- C++ SVG (default colors) -->
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                  <path fill="#00549d" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path>
+                  <path fill="#0086d4" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path>
+                  <path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path>
+                  <path fill="#0075c0" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path>
+                  <path fill="#fff" fill-rule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clip-rule="evenodd"></path>
+                  <path fill="#fff" fill-rule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>C++</span>
+            </div>
+          </div>
+        </div>
+        <!-- Education Cards -->
+        <div class="education">
+          <h3>Education</h3>
+          <!-- Update your education cards section in index.html -->
+<div class="education-cards">
+  <div class="edu-card" id="edu-card-1">
+    <h4>Bachelor of Technology</h4>
+    <p>Mathematics &amp; Computing</p>
+    <span>2023 - Present</span>
+    <div class="edu-details">
+      <p><strong>Institution:</strong> NSUT (Netaji Subhas University of Technology)</p>
+      <p><strong>Focus Areas:</strong> Building expertise in programming, leveraging modern web development frameworks, and exploring machine learning and AI.</p>
+      <!-- <p><strong>CGPA</strong> Not </p> -->
     </div>
-  </section>
-  
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <p class="about-text">
-        I am a self-taught Web Developer and an undergraduate in Mathematics and Computing. Skilled in HTML, CSS, JavaScript, and Python, I specialize in building user-friendly, high-performance applications. Passionate about combining design and technology, I'm currently focusing on backend development to create seamless and efficient solutions.
-      </p>
-      <div class="skills-container">
-        <h3>My Skills</h3>
-        <div class="skills-grid">
-          <!-- Skill Cards -->
-          <div class="skill-card" data-skill="Python">
-            <div class="skill-icon">
-              <!-- Python SVG -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 48 48">
-                <path fill="#0277BD" d="M24.047,5c-1.555,0.005-2.633,0.142-3.936,0.367c-3.848,0.67-4.549,2.077-4.549,4.67V14h9v2H15.22h-4.35c-2.636,0-4.943,1.242-5.674,4.219c-0.826,3.417-0.863,5.557,0,9.125C5.851,32.005,7.294,34,9.931,34h3.632v-5.104c0-2.966,2.686-5.896,5.764-5.896h7.236c2.523,0,5-1.862,5-4.377v-8.586c0-2.439-1.759-4.263-4.218-4.672C27.406,5.359,25.589,4.994,24.047,5z M19.063,9c0.821,0,1.5,0.677,1.5,1.502c0,0.833-0.679,1.498-1.5,1.498c-0.837,0-1.5-0.664-1.5-1.498C17.563,9.68,18.226,9,19.063,9z"></path>
-                <path fill="#FFC107" d="M23.078,43c1.555-0.005,2.633-0.142,3.936-0.367c3.848-0.67,4.549-2.077,4.549-4.67V34h-9v-2h9.343h4.35c2.636,0,4.943-1.242,5.674-4.219c0.826-3.417,0.863-5.557,0-9.125C41.274,15.995,39.831,14,37.194,14h-3.632v5.104c0,2.966-2.686,5.896-5.764,5.896h-7.236c-2.523,0-5,1.862-5,4.377v8.586c0,2.439,1.759,4.263,4.218,4.672C19.719,42.641,21.536,43.006,23.078,43z M28.063,39c-0.821,0-1.5-0.677-1.5-1.502c0-0.833,0.679-1.498,1.5-1.498c0.837,0,1.5,0.664,1.5,1.498C29.563,38.32,28.899,39,28.063,39z"></path>
-              </svg>
-            </div>
-            <span>Python</span>
-          </div>
-          <div class="skill-card" data-skill="HTML">
-            <div class="skill-icon">
-              <!-- HTML SVG -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 48 48">
-                <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5z"></path>
-                <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                <path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path>
-                <path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
-              </svg>
-            </div>
-            <span>HTML</span>
-          </div>
-          <div class="skill-card" data-skill="CSS">
-            <div class="skill-icon">
-              <!-- CSS SVG -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 48 48">
-                <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5z"></path>
-                <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                <path fill="#FFF" d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z"></path>
-                <path fill="#EEE" d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z"></path>
-              </svg>
-            </div>
-            <span>CSS</span>
-          </div>
-          <div class="skill-card" data-skill="JavaScript">
-            <div class="skill-icon">
-              <!-- JavaScript SVG -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 48 48">
-                <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
-                <path fill="#000001" d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z"></path>
-              </svg>
-            </div>
-            <span>JavaScript</span>
-          </div>
-          <div class="skill-card" data-skill="C++">
-            <div class="skill-icon">
-              <!-- C++ SVG (default colors) -->
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                <path fill="#00549d" fill-rule="evenodd" d="M22.903,3.286c0.679-0.381,1.515-0.381,2.193,0 c3.355,1.883,13.451,7.551,16.807,9.434C42.582,13.1,43,13.804,43,14.566c0,3.766,0,15.101,0,18.867 c0,0.762-0.418,1.466-1.097,1.847c-3.355,1.883-13.451,7.551-16.807,9.434c-0.679,0.381-1.515,0.381-2.193,0 c-3.355-1.883-13.451-7.551-16.807-9.434C5.418,34.899,5,34.196,5,33.434c0-3.766,0-15.101,0-18.867 c0-0.762,0.418-1.466,1.097-1.847C9.451,10.837,19.549,5.169,22.903,3.286z" clip-rule="evenodd"></path>
-                <path fill="#0086d4" fill-rule="evenodd" d="M5.304,34.404C5.038,34.048,5,33.71,5,33.255 c0-3.744,0-15.014,0-18.759c0-0.758,0.417-1.458,1.094-1.836c3.343-1.872,13.405-7.507,16.748-9.38 c0.677-0.379,1.594-0.371,2.271,0.008c3.343,1.872,13.371,7.459,16.714,9.331c0.27,0.152,0.476,0.335,0.66,0.576L5.304,34.404z" clip-rule="evenodd"></path>
-                <path fill="#fff" fill-rule="evenodd" d="M24,10c7.727,0,14,6.273,14,14s-6.273,14-14,14 s-14-6.273-14-14S16.273,10,24,10z M24,17c3.863,0,7,3.136,7,7c0,3.863-3.137,7-7,7s-7-3.137-7-7C17,20.136,20.136,17,24,17z" clip-rule="evenodd"></path>
-                <path fill="#0075c0" fill-rule="evenodd" d="M42.485,13.205c0.516,0.483,0.506,1.211,0.506,1.784 c0,3.795-0.032,14.589,0.009,18.384c0.004,0.396-0.127,0.813-0.323,1.127L23.593,24L42.485,13.205z" clip-rule="evenodd"></path>
-                <path fill="#fff" fill-rule="evenodd" d="M31 21H33V27H31zM38 21H40V27H38z" clip-rule="evenodd"></path>
-                <path fill="#fff" fill-rule="evenodd" d="M29 23H35V25H29zM36 23H42V25H36z" clip-rule="evenodd"></path>
-              </svg>
-            </div>
-            <span>C++</span>
-          </div>
-        </div>
-      </div>
-      <!-- Education Cards -->
-      <div class="education">
-        <h3>Education</h3>
-        <div class="education-cards">
-          <div class="edu-card">
-            <h4>Bachelor of Technology</h4>
-            <p>Mathematics &amp; Computing</p>
-            <span>2023 - Present</span>
-          </div>
-          <div class="edu-card">
-            <h4>Grade 12 (PCM)</h4>
-            <p>CBSE Board</p>
-            <span>2020 - 2022</span>
-          </div>
-        </div>
-      </div>
+  </div>
+  <div class="edu-card" id="edu-card-2">
+    <h4>Grade 12 (PCM)</h4>
+    <p>CBSE Board</p>
+    <span>2020 - 2022</span>
+    <div class="edu-details">
+      <p><strong>Institution:</strong> Hansraj Smarak Senior Secondary School</p>
+      <p><strong>Subjects:</strong> Physics, Chemistry, Mathematics</p>
+      <p><strong>Marks:</strong> 90 %</p>
     </div>
-  </section>
-  
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio">
-    <h2 class="section-title">Portfolio</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">
-          <img src="./Images/project-1.png" alt="Modern Business Website">
+  </div>
+</div>
         </div>
-        <div class="project-info">
-          <h4>Modern Business Website</h4>
-          <p>Clean design showcasing PR agency services and pricing.</p>
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+      </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <h2 class="section-title">Portfolio</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./Images/project-1.png" alt="Modern Business Website">
           </div>
-          <div class="project-links">
-            <a href="https://shreeprteam.pages.dev/" target="_blank" class="demo-link">Live Demo</a>
-            <a href="https://github.com/dheeraj-k-310/PR-Website" target="_blank" class="code-link">View Code</a>
+          <div class="project-info">
+            <h4>Modern Business Website</h4>
+            <p>Clean design showcasing PR agency services and pricing.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://shreeprteam.pages.dev/" target="_blank" class="demo-link">Live Demo</a>
+              <a href="https://github.com/dheeraj-k-310/PR-Website" target="_blank" class="code-link">View Code</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2 class="section-title">Let's Connect</h2>
-    <div class="contact-container">
-      <div class="contact-content">
-        <div class="contact-text">
-          <h3>Get In Touch</h3>
-          <p>Have a project in mind or just want to say hello? I'd love to hear from you!</p>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-container">
+        <div class="contact-content">
+          <div class="contact-text">
+            <h3>Get In Touch</h3>
+            <p>Have a project in mind or just want to say hello? I'd love to hear from you!</p>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <span class="focus-border"></span>
+              </div>
+              <button type="submit" class="submit-btn">
+                <span>Not Working (Coming Soon)</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
-        <div class="contact-form">
-          <form id="contactForm">
-            <div class="form-group">
-              <input type="text" id="name" placeholder="Your Name" required>
-              <span class="focus-border"></span>
+        <div class="social-links">
+          <a href="mailto:dheeraj.ug23@nsut.ac.in" class="social-card" data-tooltip="Email Me">
+            <div class="social-icon">
+              <i class="fas fa-envelope"></i>
             </div>
-            <div class="form-group">
-              <input type="email" id="email" placeholder="Your Email" required>
-              <span class="focus-border"></span>
+            <p>Email</p>
+          </a>
+          <a href="https://www.linkedin.com/in/dheeraj-kumar-504841203/" target="_blank" class="social-card" data-tooltip="LinkedIn">
+            <div class="social-icon">
+              <i class="fab fa-linkedin"></i>
             </div>
-            <div class="form-group">
-              <textarea id="message" placeholder="Your Message" required></textarea>
-              <span class="focus-border"></span>
+            <p>LinkedIn</p>
+          </a>
+          <a href="https://github.com/dheeraj-k-310" target="_blank" class="social-card" data-tooltip="GitHub">
+            <div class="social-icon">
+              <i class="fab fa-github"></i>
             </div>
-            <button type="submit" class="submit-btn">
-              <span>Not Working (Coming Soon)</span>
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
+            <p>GitHub</p>
+          </a>
         </div>
       </div>
-      <div class="social-links">
-        <a href="mailto:dheeraj.ug23@nsut.ac.in" class="social-card" data-tooltip="Email Me">
-          <div class="social-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <p>Email</p>
-        </a>
-        <a href="https://www.linkedin.com/in/dheeraj-kumar-504841203/" target="_blank" class="social-card" data-tooltip="LinkedIn">
-          <div class="social-icon">
-            <i class="fab fa-linkedin"></i>
-          </div>
-          <p>LinkedIn</p>
-        </a>
-        <a href="https://github.com/dheeraj-k-310" target="_blank" class="social-card" data-tooltip="GitHub">
-          <div class="social-icon">
-            <i class="fab fa-github"></i>
-          </div>
-          <p>GitHub</p>
-        </a>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="modern-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 DHEERAJ. All rights reserved.</p>
+        <div class="legacy-link">
+          <a href="#old-footer">View Old Version</a>
+        </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 DHEERAJ. All rights reserved.</p>
-  </footer>
+    </footer>
   
   <!-- Scripts & Particle Canvas -->
+  
   <script src="script.js"></script>
-  <canvas id="particleCanvas"></canvas>
+  
 </body>
 </html>
